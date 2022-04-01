@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-I will be analyzing two datasets containing four months of rideshare data from PyBer, a Pyhon-based ride-sharing app company .The following is a list of steps and deliverables for the project: 
+I will be analyzing two datasets containing four months of rideshare data from PyBer, a Pyhon-based ride-sharing app company.  The following is a list of steps and deliverables for the project: 
 
 - Import the data into a Pandas DataFrame.
 - Merge the DataFrames.
