@@ -271,6 +271,25 @@ ax.grid()
 
 There is a massive discrepency in driver counts between the three city types, as can be easily visualized above.
 
+Another visualization that may be useful is a pie chart representing percentage of total fares by city.  Below is the code and outpu:
+
+
+```python
+
+plt.subplots(figsize=(10, 6))
+plt.pie(type_percents,
+    labels=["Rural", "Suburban", "Urban"],
+    colors=["gold", "lightskyblue", "lightcoral"],
+    explode=[0, 0, 0.1],
+    autopct='%1.1f%%',
+    shadow=True, startangle=150)
+plt.title("% of Total Fares by City Type")
+mpl.rcParams['font.size'] = 14
+
+```
+
+![Percentage Fares by Type Pie Chart](https://github.com/maddenc33/PyBer_Analysis/blob/main/analysis/Fig5.png?raw=true)
+
 ---
 
 ## Challenge Summary
