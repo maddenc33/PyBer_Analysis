@@ -34,7 +34,7 @@ https://github.com/maddenc33/PyBer_Analysis
 
 ### Data Sources
 
- - ciy_data.csv
+ - city_data.csv
 
  - ride_data.csv
 
@@ -177,8 +177,6 @@ plt.show()
 Executing the cell creates a scatter plot 'Fig1.png' and saves it in the 'analysis' folder.  Here is the final product:
 
 ![Combined Scatter Plot](https://github.com/maddenc33/PyBer_Analysis/blob/main/analysis/Fig1.png?raw=true)
-
-The scatter plot successfully merged all three city type scatter plots onto the same graph.
 
 ---
 
