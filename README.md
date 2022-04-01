@@ -181,7 +181,7 @@ Executing the cell creates a scatter plot 'Fig1.png' and saves it in the 'analys
 
 Next, I used the scipy library to calculate summary statisics.  Here is an example of its implementation for suburban fares:
 
-``python
+```python
 
 mode_urban_fares = sts.mode(urban_fares)
 
