@@ -226,6 +226,8 @@ ax.grid()
 
 ![Ride Fare Data Box-and-Whisker Plot](https://github.com/maddenc33/PyBer_Analysis/blob/main/analysis/Fig3.png?raw=true)
 
+Notice how the two graphs are similar but inverted.  This is a visual demonstration of the negative correlation between the fare and ride count in a given area.
+
 ---
 
 ## Analysis
