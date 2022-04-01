@@ -43,6 +43,8 @@ https://github.com/maddenc33/PyBer_Analysis
 - Python 3.9.7
   - pandas library
   - matplotlib library
+  - numpy library
+  - scipy library
 
 - Jupyter Notebook 6.4.5
 
@@ -177,11 +179,97 @@ Executing the cell creates a scatter plot 'Fig1.png' and saves it in the 'analys
 
 ![Combined Scatter Plot](https://github.com/maddenc33/PyBer_Analysis/blob/main/analysis/Fig1.png?raw=true)
 
+Next, I used the scipy library to calculate summary statisics.  Here is an example of its implementation for suburban fares:
+
+``python
+
+mode_urban_fares = sts.mode(urban_fares)
+
+mode_urban_drivers = sts.mode(urban_drivers)
+
+```
+
+To create a box-and-whisker plot for ride count data and urban fare data using object oriented programming, I first made three seperate box and whisker plots for each city type, then combined them into one graph.  Here is the syntax followed by the output:
+
+```python
+
+# Add all ride count box-and-whisker plots to the same graph.
+x_labels = ["Urban", "Suburban","Rural"]
+ride_count_data = [urban_ride_count, suburban_ride_count, rural_ride_count]
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.set_title('Ride Count Data (2019)',fontsize=20)
+ax.set_ylabel('Number of Rides',fontsize=14)
+ax.set_xlabel("City Types",fontsize=14)
+ax.boxplot(ride_count_data, labels=x_labels)
+ax.set_yticks(np.arange(0, 45, step=3.0))
+ax.grid()
+
+```
+
+![Ride Count Box-and-Whisker Plot](https://github.com/maddenc33/PyBer_Analysis/blob/main/analysis/Fig2.png?raw=true)
+
+```python
+
+# Add all fare data box-and-whisker plots to the same graph.
+x_labels = ["Urban", "Suburban","Rural"]
+fare_data = [urban_fares, suburban_fares, rural_fares]
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.set_title('Ride Fare Data (2019)',fontsize=20)
+ax.set_ylabel('Fare($USD)',fontsize=14)
+ax.set_xlabel("City Types",fontsize=14)
+ax.boxplot(fare_data, labels=x_labels)
+ax.set_yticks(np.arange(0, 60, step=5.0))
+ax.set_ylim(0,60)
+ax.grid()
+
+```
+
+![Ride Fare Data Box-and-Whisker Plot](https://github.com/maddenc33/PyBer_Analysis/blob/main/analysis/Fig3.png?raw=true)
+
 ---
 
 ## Analysis
 
-The following is a summary of some of the key overall findings:
+The average number of rides in rural cities tends to be 2.5-3.5x lower than urban and suburban cities, respectively.  Also, the average price of a fare is significantly higher in rural areas, 1.4x higher than in urban areas and suburban areas, respectively.
+This is probably due to driver scarcity and longer distances in rural areas.  Examining the issue of driver scarcity, we can see that the driver count in rural areas is significantly lower than in urban areas.
+
+Here are the driver counts by city for rural areas:
+
+Bradshawfurt      7.0
+Garzaport         7.0
+Harringtonfort    4.0
+Jessicaport       1.0
+Lake Jamie        4.0
+
+and here are driver counts by urban city:
+
+Amandaburgh        12.0
+Barajasview        26.0
+Carriemouth        52.0
+Christopherfurt    41.0
+Deanville          49.0
+
+Now let's look at the code and resulting output for a box-and-whisker plot of driver count data for all three city types:
+
+```python
+
+# Add all driver count box-and-whisker plots to the same graph.
+x_labels = ["Urban", "Suburban","Rural"]
+driver_data = [urban_drivers, suburban_drivers, rural_drivers]
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.set_title('Driver Count Data (2019)',fontsize=20)
+ax.set_ylabel('Number of Drivers',fontsize=14)
+ax.set_xlabel("City Types",fontsize=14)
+ax.boxplot(driver_data, labels=x_labels)
+ax.set_yticks(np.arange(0, 80, step=5.0))
+ax.set_ylim(-5,80)
+ax.grid()
+
+```
+
+![Driver Count Data Box-and-Whisker Plot](https://github.com/maddenc33/PyBer_Analysis/blob/main/analysis/Fig4.png?raw=true)
+
+There is a massive discrepency in driver counts between the three city types, as can be easily visualized above.
 
 ---
 
