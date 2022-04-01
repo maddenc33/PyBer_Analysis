@@ -58,9 +58,10 @@ https://github.com/maddenc33/PyBer_Analysis
 
 ## Challenge Overview
 
-After importing the files and before merging them, I was challenged with checking the data for errors and formatting, so that I could execute the merge successfully.  Missing, malformed or incorrect data could lead to a poor or incorrect analysis, so this step is very important.
-Specifically, I first verified there weren't any null values. Then I had to ensure that the data that was intuitively numbers were stored as the correct data type to perform mathematical calculations.
+After importing the files and before merging them, I was challenged with checking the data for errors and formatting, so that I could execute the merge successfully.  Missing, malformed or incorrect data could lead to a poor or incorrect analysis, so this step is very important.  Specifically, I first verified there weren't any null values. Then I had to ensure that the data that was intuitively numbers were stored as the correct data type to perform mathematical calculations.
+
 The following functions are particularly useful for data verification: .unique(), .sum(), .count(), .dtypes(), and .info().
+
 In this particular case, both data sets were confirmed to be formatted correctly and not missing data.
 I merged the two dataframes on the column 'city'.  The new dataframe ('pyber_data_df') includes all six unique columns from the two datasets.
 
