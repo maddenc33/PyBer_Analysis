@@ -120,7 +120,7 @@ Here is what the three individual scatter plots look like:
 To combine the three scatter plots, I called all three .scatter() functions in the same cell.  Once the three scatter plots were merged, I needed to add titles, add a grid, format the legend, and add a note.
 Here is what the cell looks like:
 
-``python
+```python
 
 # Build the scatter charts for each city type.
 
@@ -176,7 +176,7 @@ plt.show()
 
 Executing the cell creates a scatter plot 'Fig1.png' and saves it in the 'analysis' folder.  Here is the final product:
 
-![Rural Data](https://github.com/maddenc33/PyBer_Analysis/blob/main/analysis/Fig1.png?raw=true)
+![Combined Scatter Plot](https://github.com/maddenc33/PyBer_Analysis/blob/main/analysis/Fig1.png?raw=true)
 
 The scatter plot successfully merged all three city type scatter plots onto the same graph.
 
