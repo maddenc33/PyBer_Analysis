@@ -71,7 +71,6 @@ Next I was tasked with creating a scatter plot to visualize the data, plotting t
 
 I needed to create additional dataframes to store the data by type ('urban_cities_df','suburban_cities_df', and 'rural_cities_df'), then I used the .groupby() and .count() functions to create a series of data that has the name of each city as the index:
 
-
 ```python
 
 urban_ride_count = urban_cities_df.groupby(["city"]).count()["ride_id"]
@@ -82,9 +81,7 @@ rural_ride_count = rural_cities_df.groupby(["city"]).count()["ride_id"]
 
 ```
 
-
 I used a similar syntax for finding the average city fare for each city type, using .mean() instead of .count():
-
 
 ```python
 
@@ -96,9 +93,7 @@ rural_avg_fare = rural_cities_df.groupby(["city"]).mean()["fare"]
 
 ```
 
-
 To find the average number of drivers for each city type, I used a similar syntax again:
-
 
 ```python
 
@@ -109,7 +104,6 @@ suburban_driver_count = suburban_cities_df.groupby(["city"]).mean()["driver_coun
 rural_driver_count = rural_cities_df.groupby(["city"]).mean()["driver_count"]
 
 ```
-
 
 With the sums and averages calculated and stored in dataframes, I now had the data I needed to create a scatter plot.
 In order to create a scatter plot containing data for each city type, I had to first create three individual scatter plots, one for each city type (urban, suburban and rural).
@@ -123,7 +117,6 @@ Here is what the three individual scatter plots look like:
 
 To combine the three scatter plots, I called all three .scatter() functions in the same cell.  Once the three scatter plots were merged, I needed to add titles, add a grid, format the legend, and add a note.
 Here is what the cell looks like:
-
 
 ```python
 
@@ -178,7 +171,6 @@ plt.savefig("analysis/Fig1.png")
 plt.show()
 
 ```
-
 
 Executing the cell creates a scatter plot 'Fig1.png' and saves it in the 'analysis' folder.  Here is the final product:
 
