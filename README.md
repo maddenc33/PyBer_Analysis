@@ -297,10 +297,21 @@ Here are the resulting three pie charts:
 
 ![Percentage Fares by Type Pie Chart](https://github.com/maddenc33/PyBer_Analysis/blob/main/analysis/Fig7.png?raw=true)
 
-
-
 ---
 
 ## Challenge Summary
 
-Challenge summmary.
+At first glance, the lower ride volume in rural areas seems to be balanced out by greater fare per ride in those areas.  The scarcity of drivers lowers the available supply, increasing price.  Conversely, in densely populated urban areas, the supply of available drivers is much higher and fares are lower.
+
+Below is a line chart showing total fare by city type over a five month period from January 2019 to May 2019:
+
+![Percentage Fares by Type Pie Chart](https://github.com/maddenc33/PyBer_Analysis/blob/main/analysis/Fig7.png?raw=true)
+
+Notice how the three data series seem to mirror one another week by week.  It seems as though demand tends to be the same in all three city types at a given time.  When demand increases in urban areas, it does so in suburban and rural areas at the same time.
+
+Recommendations:
+  - Rural fares are your high-end.  Low volume and high revenue.  Continue efforts to increase rural volume to increase profits.
+  - Urban fares are your low-end.  High volume, low margin.  Suburban areas fall in the middle.
+  - I would focus efforts on expanding urban markets to maximize revenue.  Although revenue per ride is lower, the sheer volume makes up for it.
+  - Demand is uniform across all three city types, so there is no advantage for the rural or suburban market over the urban market.
+  - I would highly recommend analyzing the elasticity of demand with regards to price for each city type.  This way you can gauge whether or not you can increase the price of fares in either of the city types and see an increase in revenue as a result.  Without knowing the elasticity of demand for rides with regards to price, we will not know whether or not we should increase prices, decrease prices, or keep prices the same.
