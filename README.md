@@ -305,7 +305,7 @@ At first glance, the lower ride volume in rural areas seems to be balanced out b
 
 Below is a line chart showing total fare by city type over a five month period from January 2019 to May 2019:
 
-![Percentage Fares by Type Pie Chart](https://github.com/maddenc33/PyBer_Analysis/blob/main/analysis/Fig7.png?raw=true)
+![Percentage Fares by Type Pie Chart](https://github.com/maddenc33/PyBer_Analysis/blob/main/analysis/Total_Fare_by_City_Type.png?raw=true)
 
 Notice how the three data series seem to mirror one another week by week.  It seems as though demand tends to be the same in all three city types at a given time.  When demand increases in urban areas, it does so in suburban and rural areas at the same time.
 
